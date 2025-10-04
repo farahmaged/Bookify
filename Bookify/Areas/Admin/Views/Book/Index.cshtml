@@ -1,0 +1,44 @@
+﻿@{
+    // Sayfa basligi olarak Book Page gozukmesi icin
+    ViewData["Title"] = "Book Page";
+}
+@model List<Book>
+
+<div class="card shadow border-0 my-4">
+    <div class="card-header bg-secondary bg-gradient ml-0 py-3">
+        <div class="col-12 text-center">
+            <h2 class="text-white py-2">Book List</h2>
+        </div>
+    </div>
+</div>
+
+<div class="card-body p-4 mb-5">
+    <div class="row pFb-3">
+        <div class="col-6">
+        </div>
+        <div class="col-6 text-end mb-4">
+            <a asp-controller="Book" asp-action="Upsert" class="btn btn-dark">
+                <i class="bi bi-plus-circle"></i> Create New Book
+            </a>
+        </div>
+    </div>
+
+    <table id="tblData" class="table table-hover table-striped mb-5" style="width:100%">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>ISBN</th>
+                <th>Price</th>
+                <th>Author</th>
+                <th>Category</th>
+                <th></th>
+
+            </tr>
+        </thead>
+    </table>
+</div>
+
+@section Scripts {
+    <script src="~/js/book.js"></script>
+}
+
